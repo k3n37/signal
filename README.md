@@ -1,36 +1,34 @@
 # signal
 
-Reliability and SRE patterns for service objectives, incidents, runbooks, and resilience engineering.
-
 ## Purpose
+Improve service health and operational resilience through reliability practices, runbooks, and service objectives.
 
-`signal` exists to make production operations and reliability discipline explicit across the ecosystem.
+## Why it matters
+When reliability work is implicit, services fail in familiar ways and teams respond without enough operational structure.
 
-## Role in the ecosystem
+## Scope
+This repo focuses on health signals, incident response patterns, and resilience guidance. It does not try to replace service-local operational code.
 
-- Reliability companion to `beacon`
-- Supports safe runtime operations for `orbit`
-- Adds service maturity alongside `runway` and `verdict`
+## System Role
+`signal` is the reliability and SRE layer for the ecosystem. It turns observability and runtime behavior into operational action.
 
-## Status
+## System Connections
+- Depends on: telemetry from `beacon` and runtime context from `nimbus`.
+- Feeds into: service hardening and operational readiness.
+- Interacts with: `beacon`, `forge`, `nimbus`.
 
-Docs-first starter with SLO examples and an SRE playbook.
+## Core Concepts
+- service health
+- retry strategy
+- incident response
+- runbook structure
+- service objectives
 
-## Tech stack
+## Minimal Artifact
+`src/slo.yaml` and `docs/sre-playbook.md` provide the starter reliability baseline.
 
-- YAML
-- Markdown
+## Notes
+Reliability here is part of system design, not a separate afterthought once code ships.
 
-## Structure
-
-```text
-signal/
-├── docs/
-│   └── sre-playbook.md
-├── src/
-│   └── slo.yaml
-├── .editorconfig
-├── .gitignore
-├── README.md
-└── ROADMAP.md
-```
+## Next Steps
+Add health-check examples, retry patterns, and incident review templates.
